@@ -17,11 +17,11 @@ func TestByDescription(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			result := ByDescription(test.Params)
 			if len(result) != len(test.Want) {
-				t.Errorf("Incorrect inputs")
+				t.Errorf("expected is not matched with the result")
 			}
 			for _, emoji := range result {
 				if !slices.Contains(test.Want, emoji.Emoji) {
-					t.Errorf("Incorrect arrays")
+					t.Errorf("Incorrect result")
 				}
 			}
 		})
